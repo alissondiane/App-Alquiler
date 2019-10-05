@@ -9,6 +9,7 @@ import NumeroRecibo from './NumeroRecibo'
 import '../App.css';
 import PropTypes from 'prop-types';
 import {browserHistory} from 'react-router-3';
+import M from 'materialize-css';
 
 
 const propTypes = {
@@ -49,6 +50,10 @@ class App extends React.Component {
     this.Funcion=this.Funcion.bind(this);
     
   }
+
+componentDidMount() {
+  M.AutoInit();
+}
 componentDidUpdate(){
     if(this.state.estado!=0){
       var checks=document.getElementsByClassName("checkbox1");
